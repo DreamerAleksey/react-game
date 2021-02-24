@@ -1,0 +1,6 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 30px;
+    padding: 10px;
+}
