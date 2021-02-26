@@ -1,0 +1,12 @@
+.settingsWrapper {
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+.buttonsBlock {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+}

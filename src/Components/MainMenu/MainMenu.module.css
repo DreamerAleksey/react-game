@@ -1,0 +1,21 @@
+.wrapper {
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+}
+
+.menuButtons {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: center;
+}
+
