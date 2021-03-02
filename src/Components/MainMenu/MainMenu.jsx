@@ -3,6 +3,7 @@ import {Button} from 'antd';
 import styles from './MainMenu.module.css'
 
 const MainMenu = () => {
+    if (!localStorage.getItem('volume')) localStorage.setItem('volume', '0.5');
     return (
         <div className={styles.wrapper}>
             <div className={styles.header}>
