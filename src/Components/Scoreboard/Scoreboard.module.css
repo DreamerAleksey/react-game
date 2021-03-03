@@ -1,0 +1,39 @@
+.wrapper {
+    display: contents;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    padding: 50px;
+    font-size: 25px;
+}
+
+.line {
+    display: flex;
+    padding: 3px;
+    background-color: bisque;
+    border: 1px solid black;
+}
+.wrapper .div {
+    display: flex;
+}
+
+.scoreWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+    justify-content: center;
+    height: 100%;
+}
+
+.index {
+    width: 75px;
+    text-align: center;
+}
+.score {
+    width: 75px;
+    text-align: center;
+}

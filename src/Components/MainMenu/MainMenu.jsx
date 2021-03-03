@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button} from 'antd';
 import styles from './MainMenu.module.css'
+import Footer from "../Footer/Footer";
 
 const MainMenu = () => {
     if (!localStorage.getItem('volume')) localStorage.setItem('volume', '0.5');
@@ -20,10 +21,8 @@ const MainMenu = () => {
                 <Button href='/how_to_play'>
                     How to play
                 </Button>
-                <Button href='/about'>
-                    About
-                </Button>
             </div>
+            <Footer />
         </div>
     )
 }

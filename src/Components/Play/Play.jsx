@@ -119,6 +119,9 @@ const Play = () => {
                 e.key === 'ArrowRight') {
                 setDirection(DIRECTION.right);
             }
+            if (e.key === ' ') {
+                window.location.reload();
+            }
         }
         document.addEventListener('keydown', onKeypress);
         return () => {
@@ -142,20 +145,30 @@ const Play = () => {
     return (
         <div className="wrapper">
             <Header/>
-            <Music/>
-            {intersectsWithSomething ? <GameOver count={k}/> : (
-                <div className='miniField'>
-                    {FieldRow.map(y => (
-                        <div className='horizontal'>
-                            {FieldRow.map(x => (
-                                <Cell x={x} y={y} segments={snakeSegments} foodItem={foodItem}/>
-                            ))}
-                        </div>
-                    ))}
+            <div>
+                <div>
+                    <Statistics count={k}/>
                 </div>
-            )}
-            <Statistics count={k}/>
-            <Button onClick={() => window.history.back()}>Back</Button>
+                {intersectsWithSomething ? <GameOver count={k}/> : (
+                    <div className='miniField'>
+                        {FieldRow.map(y => (
+                            <div className='horizontal'>
+                                {FieldRow.map(x => (
+                                    <Cell x={x} y={y} segments={snakeSegments} foodItem={foodItem}/>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                )}
+                <div>
+                    {intersectsWithSomething ?
+
+                                <Button onClick={() => {window.location.reload()}}>New Game</Button> :
+                            <Button onClick={() => {window.history.back()}}>Back</Button>
+                    }
+                </div>
+            </div>
+            <Music/>
             <Footer/>
         </div>
     );

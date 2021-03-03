@@ -1,6 +1,7 @@
 import React from "react";
 import {Button, Slider} from "antd";
 import styles from './Settings.module.css';
+import Footer from "../Footer/Footer";
 
 const Settings = () => {
     let volume = +localStorage.getItem('volume');
@@ -28,6 +29,7 @@ const Settings = () => {
                 }>Hard</Button>
                 <Button onClick={() => window.history.back()}>Back</Button>
             </div>
+            <Footer />
         </div>
     )
 }
